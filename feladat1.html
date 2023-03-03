@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1. feladat</title>
+</head>
+<body>
+    <label for="bev">Adjon meg egy számot</label>
+    <input type="number" id="bev" name="bev"><br>
+    <button type="button" id="hozzaad" onclick=hozza()>Hozzáaad</button>
+    <button type="button" id="kiir" onclick=kiir()>Kiír</button>
+    <p id="lista"></p>
+    <script>
+        var lista=[]
+        function hozza(){
+            var bev=document.getElementById("bev").value
+            lista.push(bev)
+            console.log(lista)
+        }
+        function kiir(){
+            document.getElementById("lista").innerHTML=lista
+        }
+    </script>
+</body>
+</html>

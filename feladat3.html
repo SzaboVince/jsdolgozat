@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. feladat</title>
+</head>
+<body>
+    <label for="teg1">Téglalap a oldala (cm):</label>
+    <input type="number" id="teg1" name="teg1"><br>
+    <label for="teg2">Téglalap b oldala (cm):</label>
+    <input type="number" id="teg2" name="teg2"><br>
+    <button type="button" id="tk" onclick=tk()>Téglalap területe és kerülete</button>
+    <p id="terker"></p>
+    <script>
+        function tk(){
+            const a=document.getElementById("teg1").value
+            const b=document.getElementById("teg2").value
+            const c=a*2
+            const d=b*2
+            const ker=c+d
+            const ter=a*b
+            document.getElementById("terker").innerHTML="Téglalap kerülete: "+ker+" cm"+" Téglalap területe: "+ter+" cm2"
+        }
+    </script>
+</body>
+</html>

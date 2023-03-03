@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5. feladat</title>
+</head>
+<body>
+    <label for="nev">Teljes név</label>
+    <input type="text" id="nev" name="nev"><br>
+    <label for="tel">Telefonszám</label>
+    <input type="number" id="tel" name="tel"><br>
+    <label for="irsz">Irszám</label>
+    <input type="number" id="irsz" name="irsz">
+    <label for="var">Város</label>
+    <input type="text" id="var" name="var">
+    <label for="utca">Utca</label>
+    <input type="text" id="utca" name="utca">
+    <label for="haz">Házszám</label>
+    <input type="number" id="haz" name="haz"><br>
+    <label for="alap">Pizza alapja</label>
+    <select title="Pizza alapja" id="alap">
+        <option>Tejfölös</option>
+        <option>Paradicsomos</option>
+    </select><br>
+    <label for="felt">Feltét</label>
+    <select title="Feltét" id="felt">
+        <option>Sonka</option>
+        <option>Szalámi</option>
+        <option>Kukorica</option>
+        <option>Bacon</option>
+        <option>Tojás</option>
+    </select><br>
+    <label for="egyeb">Egyéb</label>
+    <textarea cols="40" rows="4" id="egyeb"></textarea><br>
+    <button type="button" id="gomb" onclick=rendeles()>Felvétel</button>
+    <script>
+        function rendeles(){
+            nev=document.getElementById("nev").value
+            tel=document.getElementById("tel").value
+            irsz=document.getElementById("irsz").value
+            varos=document.getElementById("var").value
+            utca=document.getElementById("utca").value
+            haz=document.getElementById("haz").value
+            alap=document.getElementById("alap").value
+            felt=document.getElementById("felt").value
+            egyeb=document.getElementById("egyeb").value
+            const rendeles="Megrendelő: "+nev+" "+tel+" "+irsz+" "+varos+" "+utca+" "+haz+" Pizza: "+alap+" "+felt+" Egyéb: "+egyeb
+            console.log(rendeles)
+        }
+    </script>
+</body>
+</html>

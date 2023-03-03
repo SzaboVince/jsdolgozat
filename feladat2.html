@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. feladat</title>
+</head>
+<body>
+    <label for="vez">Vezetéknév:</label>
+    <input type="text" id="vez" name="vez"><br>
+    <label for="ker">Keresztnév:</label>
+    <input type="text" id="ker" name="ker"><br>
+    <label for="el">Életkor:</label>
+    <input type="number" id="el" name="el"><br>
+    <button type="button" onclick=kiir()>Kiír</button>
+    <p id="asd"></p>
+    <script>
+        function kiir(){
+            var vez=document.getElementById("vez").value
+            var ker=document.getElementById("ker").value
+            var el=document.getElementById("el").value
+            document.getElementById("asd").innerHTML=vez+" "+ker+" "+"("+el+" év)"
+        }
+    </script>
+</body>
+</html>
